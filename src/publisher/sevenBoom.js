@@ -1,5 +1,4 @@
 import EventEmitter from 'events'
-import BOOM from '../clients/BOOM.js'
 
 class Game extends EventEmitter {
     constructor(limitNumber) {
