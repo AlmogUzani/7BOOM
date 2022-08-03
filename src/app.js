@@ -14,6 +14,9 @@ function sevenBoomService() {
     playerDetails = getFunctions.getNameAndAge()
     const player3 = new Player(playerDetails[0], playerDetails[1])
     game._players.push(player3)
+    for(let player of game._players){
+        console.log(`Player Name: ${player._name}, Age: ${player._age}`);
+    }
 
     game.on('count', BOOM)
 
