@@ -1,6 +1,5 @@
 import EventEmitter from 'events'
 
-
 class game extends EventEmitter {
     constructor(limitNumber) {
         super()
@@ -9,17 +8,10 @@ class game extends EventEmitter {
     }
     startCount() {
         for (let i = this._firstNumber ; i <= this._limitNumber ; i++){
-            if (this.mulOfSeven(i)) {this.emit('x7', i)}
-            if (this.endWithSeven(i)) {this.emit('with7', i)}
-            else (this.emit('count', i))
+            (this.emit('count', i))
         }
     }
-    mulOfSeven(num) {
-        return (!(num % 7))
-    }
-    endWithSeven(num) {
-        return (num % 10 === 7)
-    }
+    
 }
 
 export default game
