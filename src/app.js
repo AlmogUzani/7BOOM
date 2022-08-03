@@ -17,11 +17,7 @@ function sevenBoomService() {
     game._players.push(player3)
     console.log(player1,player2,player3);
 
-    const multi = new MulOfSeven()
-    const endWith = new EndWithSeven()
 
-    game.on('start', multi.mulOfSeven)
-    game.on('start', endWith.endWithSeven)
 
     game.startCount()
 
