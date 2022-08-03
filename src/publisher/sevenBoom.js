@@ -1,9 +1,5 @@
 import EventEmitter from 'events'
-import EndWithSeven from '../clients/endWithSeven.js'
-import MulOfSeven from '../clients/mulOfSeven.js'
 import BOOM from '../clients/BOOM.js'
-const multi = new MulOfSeven()
-const endWith = new EndWithSeven()
 
 class Game extends EventEmitter {
     constructor(limitNumber) {
@@ -13,9 +9,12 @@ class Game extends EventEmitter {
         this._limitNumber = limitNumber
     }
     startCount() {
+        let counter = 0
         for (let i = this._firstNumber ; i <= this._limitNumber ; i++){
-            BOOM(i)
+            BOOM(this._players[counter]._name, i)
             this.emit('count', i)
+            counter++
+            if (counter===3) counter=0
         }
     }
 }

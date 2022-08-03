@@ -1,4 +1,5 @@
 import RL from 'prompt-sync'
+
 const readline = RL()
 
 function getNameAndAge() {
