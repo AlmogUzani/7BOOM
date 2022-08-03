@@ -3,9 +3,9 @@ import MulOfSeven from "./mulOfSeven.js"
 const multi = new MulOfSeven
 const endWith = new EndWithSeven
 
-function BOOM(player, number) {
-    if (multi.mulOfSeven(number)) console.log(`${player} - BOOM`) 
-    else if (endWith.endWithSeven(number)) console.log(`${player} - BOOM`)
-    else console.log(`${player} - ${number}`)
+function BOOM(args) {
+    if (multi.mulOfSeven(args[1])) console.log(`${args[0]} - BOOM`) 
+    else if (endWith.endWithSeven(args[1])) console.log(`${args[0]} - BOOM`)
+    else console.log(`${args[0]} - ${args[1]}`)
 }
 export default BOOM

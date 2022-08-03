@@ -11,10 +11,9 @@ class Game extends EventEmitter {
     startCount() {
         let counter = 0
         for (let i = this._firstNumber ; i <= this._limitNumber ; i++){
-            BOOM(this._players[counter]._name, i)
-            this.emit('count', i)
             counter++
             if (counter===3) counter=0
+            this.emit('count', [this._players[counter]._name, i])
         }
     }
 }

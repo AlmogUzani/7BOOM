@@ -1,6 +1,7 @@
 import Game from "./publisher/sevenBoom.js"
 import getFunctions from "./common/playersDetails.js"
 import Player from "./common/players.js"
+import BOOM from "./clients/BOOM.js"
 
 function sevenBoomService() {
     const game = new Game(100)
@@ -14,7 +15,7 @@ function sevenBoomService() {
     const player3 = new Player(playerDetails[0], playerDetails[1])
     game._players.push(player3)
 
-
+    game.on('count', BOOM)
 
     game.startCount()
 }
