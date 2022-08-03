@@ -1,6 +1,6 @@
 import EventEmitter from 'events'
 
-class game extends EventEmitter {
+class Game extends EventEmitter {
     constructor(limitNumber) {
         super()
         this._firstNumber = 1
@@ -14,4 +14,4 @@ class game extends EventEmitter {
     
 }
 
-export default game
+export default Game
