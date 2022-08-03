@@ -11,6 +11,7 @@ class game extends EventEmitter {
         for (let i = this._firstNumber ; i <= this._limitNumber ; i++){
             if (this.mulOfSeven(i)) {this.emit('x7', i)}
             if (this.endWithSeven(i)) {this.emit('with7', i)}
+            else (this.emit('count', i))
         }
     }
     mulOfSeven(num) {
