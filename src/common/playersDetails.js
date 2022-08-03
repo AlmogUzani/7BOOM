@@ -11,3 +11,8 @@ function getMaxNumber() {
     const max = readline('Max Number: ')
     return max
 }
+
+export default {
+    getNameAndAge,
+    getMaxNumber
+}
